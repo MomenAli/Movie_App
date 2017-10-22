@@ -23,8 +23,8 @@ public class NetworkUtils {
 
     final static String PARAM_SORT = "sort_by";
 
-    final static String pop_PARAM = "popularity.desc";
-    final static String Vote_PARAM = "vote_average.desc";
+    final static String pop_PARAM = "/popular";
+    final static String Vote_PARAM = "/top_rated";
 
     final static String api_key = "api_key";
     final static String key = URLParameters.API_KEY;
@@ -36,12 +36,10 @@ public class NetworkUtils {
                 break;
             case 0: temp = Vote_PARAM;
                 break;
-            default:  temp = "revenue.desc";
+            default:  temp = "/now_playing";
         }
 
-        Uri builtUri = Uri.parse(BASE_URL).buildUpon()
-                .appendQueryParameter(primary_release_year,year)
-                .appendQueryParameter(PARAM_SORT, temp)
+        Uri builtUri = Uri.parse(BASE_URL+temp).buildUpon()
                 .appendQueryParameter(api_key, key)
                 .build();
 
