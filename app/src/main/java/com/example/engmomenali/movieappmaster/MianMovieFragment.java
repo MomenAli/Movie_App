@@ -61,6 +61,7 @@ public class MianMovieFragment extends Fragment{
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.main,menu);
+
     }
 
 
