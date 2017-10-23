@@ -33,7 +33,7 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
 
         Movie mMovie = getItem(position);
         mContext = parent.getContext();
-        if(convertView == null){
+        //if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.movie_item, parent,false);
             ImageView IM = (ImageView) convertView.findViewById(R.id.IM_PosterImage);
             Picasso.with(mContext)
@@ -41,7 +41,7 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
             .placeholder(R.drawable.placeholder)
                     .error(R.drawable.error)
                     .into(IM);
-        }
+       // }
 
         return convertView;
     }
