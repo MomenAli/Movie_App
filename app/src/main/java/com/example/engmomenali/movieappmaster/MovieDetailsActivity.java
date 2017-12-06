@@ -14,7 +14,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         ImageView IM = (ImageView) findViewById(R.id.DetailsIV);
         TextView  TVOverView = (TextView) findViewById(R.id.DetailsOverView);
         TextView  TVUserRating = (TextView) findViewById(R.id.UserRating);
